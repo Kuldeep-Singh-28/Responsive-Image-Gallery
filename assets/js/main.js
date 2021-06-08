@@ -50,8 +50,8 @@ class PhotoGallery {
       const item = document.createElement("div");
       item.classList.add("item");
       item.innerHTML = `
-      <a href='${photo.src.original}' class="image_cursor">
-        <img src="${photo.src.medium}" class="image_view">
+      <a href='${photo.src.original}'target="_blank" >
+        <img src="${photo.src.medium}" >
         <h3>${photo.photographer}</h3>
         <p>
         <a href="${photo.url}"><i  class="fas fa-download"> </i></a>
@@ -77,7 +77,7 @@ class PhotoGallery {
     // console.log(searchValue)
     const baseURL = `https://api.pexels.com/v1/search?query=${this.searchValueGlobal}&page=${index}&per_page=12`;
     const data = await this.fetchImages(baseURL);
-    console.log(data);
+    // console.log(data);
     this.GenerateHTML(data.photos);
   }
   loadMoreImages(e) {
