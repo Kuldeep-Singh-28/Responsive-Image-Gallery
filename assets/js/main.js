@@ -50,8 +50,8 @@ class PhotoGallery {
       const item = document.createElement("div");
       item.classList.add("item");
       item.innerHTML = `
-      <a href='${photo.src.original}' class="image_cursor">
-        <img src="${photo.src.medium}" class="image_view">
+      <a href='${photo.src.original}'target="_blank" >
+        <img src="${photo.src.medium}" >
         <h3>${photo.photographer}</h3>
         <p>
         <a href="${photo.url}"><i  class="fas fa-download"> </i></a>
